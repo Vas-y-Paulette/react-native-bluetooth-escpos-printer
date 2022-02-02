@@ -458,9 +458,9 @@ public class RNBluetoothEscposPrinterModule extends ReactContextBaseJavaModule
     }
 
     @ReactMethod
-    public void sendBase64Bytes(String data) {
+    public void sendBase64Bytes(String base64Data) {
         try{
-            byte[] data = Base64.decode(data, Base64.DEFAULT);
+            byte[] data = Base64.decode(base64Data, Base64.DEFAULT);
             sendDataByte(data);
 
          }catch (Exception e){
